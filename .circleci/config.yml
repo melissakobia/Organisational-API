@@ -8,7 +8,7 @@ jobs:
     filters:
       branches:
         only: master
-              #squad
+              model_structure
               #hero
 
     docker:
