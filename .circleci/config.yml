@@ -9,7 +9,7 @@ jobs:
       branches:
         only: master
               model_structure
-              #hero
+              DAO_Sql2o_implementation
 
     docker:
       # specify the version you desire here
