@@ -10,10 +10,10 @@ public class Department {
     private int id;
 
 
-    public Department(String deptName, String description, int noOfEmployees) {
+    public Department(String deptName, String description, int NoOfEmployees) {
         this.DeptName = deptName;
         this.description = description;
-        this.NoOfEmployees = noOfEmployees;
+        this.NoOfEmployees = NoOfEmployees;
     }
 
     public String getDeptName() {
@@ -36,8 +36,8 @@ public class Department {
         this.description = description;
     }
 
-    public void setNoOfEmployees(int noOfEmployees) {
-        NoOfEmployees = noOfEmployees;
+    public void setNoOfEmployees(int NoOfEmployees) {
+        this.NoOfEmployees = NoOfEmployees;
     }
 
     public int getId() {
@@ -51,15 +51,16 @@ public class Department {
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
+        if (!(o instanceof Department)) return false;
         Department that = (Department) o;
-        return getNoOfEmployees() == that.getNoOfEmployees() &&
+        return id == that.id &&
+                getNoOfEmployees() == that.getNoOfEmployees() &&
                 Objects.equals(getDeptName(), that.getDeptName()) &&
                 Objects.equals(getDescription(), that.getDescription());
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(getDeptName(), getDescription(), getNoOfEmployees());
+        return Objects.hash(getDeptName(), getDescription(), getNoOfEmployees(), getId());
     }
 }
