@@ -38,7 +38,7 @@ Run your app with `-gradle run` command on your terminal.
     
 ## Built With
 
-* Java - For all the logic and functionality
+* Java - For all the logic and functionality.
 * Spark Web Framework
 
 
