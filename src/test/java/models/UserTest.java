@@ -28,7 +28,7 @@ public class UserTest {
     @Test
     public void getPositionGetsCorrectPosition() throws Exception {
         User newUser = setupUser();
-        assertEquals("CEO", newUser.getPosition());
+        assertEquals("CEO", newUser.getCompany_position());
     }
 
     @Test
@@ -53,8 +53,8 @@ public class UserTest {
     @Test
     public void setPosition() {
         User newUser = setupUser();
-        newUser.setPosition("accountant");
-        assertNotEquals("CEO", newUser.getPosition());
+        newUser.setCompany_position("accountant");
+        assertNotEquals("CEO", newUser.getCompany_position());
     }
 
     @Test
