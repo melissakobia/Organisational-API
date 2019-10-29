@@ -24,8 +24,8 @@ public class App {
         Gson gson = new Gson();
 
 
-        String connectionString = "jdbc:h2:~/jadle.db;INIT=RUNSCRIPT from 'classpath:db/create.sql'";
-        Sql2o sql2o = new Sql2o(connectionString, "", "");
+        String connectionString = "jdbc:postgresql://localhost:5432/organisational_api";
+        Sql2o sql2o = new Sql2o(connectionString, "sonnie", "DBpassword");
         userDao = new Sql2oUserDao(sql2o);
         departmentDao = new Sql2oDepartmentDao(sql2o);
         departmentNewsDao = new Sql2oDepartmentNewsDao(sql2o);
