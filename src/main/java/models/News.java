@@ -6,7 +6,7 @@ public abstract class News {
 
     public String content;
     public String type;
-    public int id;
+
 
     public String getContent() {
         return content;
@@ -16,8 +16,12 @@ public abstract class News {
         this.content = content;
     }
 
-    public int getId() {
-        return id;
+    public String getType() {
+        return type;
+    }
+
+    public void setType(String type) {
+        this.type = type;
     }
 
     @Override
